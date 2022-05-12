@@ -12,22 +12,8 @@ import MenuCreditDebit from "./MenuCreditDebit";
 const CreditDebit=()=>{
     return (
       <div >
-        <ToastContainer />
-        <Container>
-          <Header/>
-          <Row>
-            <Col md={3}>
+        <h1>ManageUr Credits/Debits</h1>
             <MenuCreditDebit/>
-            </Col>
-            <Col md={9}>
-            <Routes>
-            <Route path="/" component={Home} exact/>
-            <Route path="/addCreditDebit" component={AddCreditDebit} exact/>
-            <Route path="/viewCreditDebit" component={ViewCreditDebit} exact/>
-            </Routes>
-            </Col>
-          </Row>
-        </Container>
       </div>
     );
   }

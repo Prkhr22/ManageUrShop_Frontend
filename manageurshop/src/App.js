@@ -10,14 +10,20 @@ import Home from './components/Home';
 import AddProduct from './components/AddProduct';
 import AddBills from './components/AddBills';
 import AddCreditDebit from './components/AddCreditDebit';
+import ViewCreditDebit from './components/ViewCreditDebit';
 import AddSupplier from './components/AddSupplier';
 import AddCustomer from './components/AddCustomer';
+import ViewCustomer from './components/ViewCustomer';
+import ViewSupplier from './components/ViewSupplier';
 import MainMenus from './components/MainMenu';
-import InventoryManagement from './MainMenu Modules/InventoryManagement';
-import BillingModule from './MainMenu Modules/BillingModule';
-import CreditDebitModule from './MainMenu Modules/CreditDebitModule';
-import AccountModule from './MainMenu Modules/AccountModule';
+import InventoryManagement from './MainMenuModules/InventoryManagement';
+import BillingModule from './MainMenuModules/BillingModule';
+import CreditDebitModule from './MainMenuModules/CreditDebitModule';
+import AccountModule from './MainMenuModules/AccountModule';
 import ViewProduct from './components/ViewProduct';
+import MenuInventory from './MainMenuModules/MenuInventory';
+import ViewBills from './components/ViewBills';
+
 function App() {
 
   const btnHandle=()=> {
@@ -34,13 +40,23 @@ function App() {
           <MainMenus/>
           </Col>
           <Col md={9}>
-            <Home/>
+            {/* <Home/> */}
             <Routes>
-            <Route path="/" component={Home} exact/>
-            <Route path="/inventory" component={InventoryManagement} exact/>
-            <Route path="/billing" component={BillingModule} exact/>
-            <Route path="/creditdebit" component={CreditDebitModule} exact/>
-            <Route path="/accounts" component={AccountModule} exact/>
+            <Route path="/" element={<Home />} exact/>
+            <Route exact path="/inventory" element={<InventoryManagement />} />
+            <Route path="/billing" element={ <BillingModule />} exact/>
+            <Route path="/creditdebit" element={<CreditDebitModule/>} exact/>
+            <Route path="/accounts" element={<AccountModule/>} exact/>
+            <Route path="/inventory/addProduct" element={<AddProduct/>} exact/>
+            <Route path="/inventory/viewProduct" element={<ViewProduct/>} exact/>
+            <Route path="/billing/addBill" element={<AddBills/>} exact/>
+            <Route path="/billing/viewBills" element={<ViewBills/>} exact/>
+            <Route path="/creditdebit/addCreditDebit" element={<AddCreditDebit/>} exact/>
+            <Route path="/creditdebit/viewCreditDebit" element={<ViewCreditDebit/>} exact/>
+            <Route path="/accounts/addSupplier" element={<AddSupplier/>} exact/>
+            <Route path="/accounts/viewSupplier" element={<ViewSupplier/>} exact/>
+            <Route path="/accounts/addCustomer" element={<AddCustomer/>} exact/>
+            <Route path="/accounts/viewCustomer" element={<ViewCustomer/>} exact/>
             </Routes>
           </Col>
         </Row>

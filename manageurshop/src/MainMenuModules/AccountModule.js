@@ -13,24 +13,7 @@ import MenuAccount from "./MenuAccount";
 const AccountModule=()=>{
     return (
       <div >
-        <ToastContainer />
-        <Container>
-          <Header/>
-          <Row>
-            <Col md={3}>
             <MenuAccount/>
-            </Col>
-            <Col md={9}>
-            <Routes>
-            <Route path="/" component={Home} exact/>
-            <Route path="/addSupplier" component={AddSupplier} exact/>
-            <Route path="/viewSupplier" component={ViewSupplier} exact/>
-            <Route path="/addCustomer" component={AddCustomer} exact/>
-            <Route path="/viewCustomer" component={ViewCustomer} exact/>
-            </Routes>
-            </Col>
-          </Row>
-        </Container>
       </div>
     );
   }

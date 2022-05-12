@@ -8,27 +8,16 @@ import MenuInventory from "./MenuInventory";
 import AddProduct from "../components/AddProduct";
 import ViewProduct from "../components/ViewProduct";
 import Home from "../components/Home";
-const InventoryManagement=()=>{
+import MenuBills from "./MenuBills";
+import AddBills from "../components/AddBills";
+import ViewBill from "../components/ViewBills";
+const BillingModule=()=>{
     return (
       <div >
-        <ToastContainer />
-        <Container>
-          <Header/>
-          <Row>
-            <Col md={3}>
-            <MenuInventory/>
-            </Col>
-            <Col md={9}>
-            <Routes>
-            <Route path="/" component={Home} exact/>
-            <Route path="/inventory/addProduct" component={AddProduct} exact/>
-            <Route path="/inventory/viewProduct" component={ViewProduct} exact/>
-            </Routes>
-            </Col>
-          </Row>
-        </Container>
+        <h1>ManageUrBills</h1>
+        <MenuBills/>    
       </div>
     );
   }
   
-  export default InventoryManagement
+  export default BillingModule

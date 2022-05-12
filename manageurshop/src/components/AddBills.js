@@ -1,6 +1,5 @@
 import React , { Fragment} from "react";
 import { Form, FormGroup, Label, Button, Input, Container } from "reactstrap";
-
 const AddBills=()=>{
     return <Fragment>
         <h1>Add Bills</h1>

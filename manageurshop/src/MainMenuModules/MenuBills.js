@@ -2,24 +2,22 @@ import React from "react";
 import { Link, Router } from "react-router-dom";
 import { ListGroup, ListGroupItem } from "reactstrap";
 
-const MenuInventory = () => {
+const MenuBills = () => {
     return(
-        <div>
-            <Router>
+        <div> 
         <ListGroup>
             <Link className="list-group-item list-group-item-action" tag="a" to="/" action>
                 Home
             </Link>
-            <Link className="list-group-item list-group-item-action" tag="a" to="/addProduct" action>
-                Add Product
+            <Link className="list-group-item list-group-item-action" tag="a" to="/billing/addBill" action>
+                Add Bill
             </Link>     
-            <Link className="list-group-item list-group-item-action" tag="a" to="/viewProduct" action>
-                View Product
+            <Link className="list-group-item list-group-item-action" tag="a" to="billing/viewBills" action>
+                View Bills
             </Link>  
         </ListGroup>
-        </Router>
         </div>
     )
 }
 
-export default MenuInventory;
+export default MenuBills;
